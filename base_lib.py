@@ -9,4 +9,5 @@ def convert_ipynb_to_pdf(notebook_file):
         os.environ['PATH'] = '/Library/TeX/texbin' + os.pathsep + os.environ['PATH']
         subprocess.run(['/opt/homebrew/bin/jupyter', 'nbconvert', '--to', 'pdf', notebook_file], capture_output=True, text=True)
     except:
+        print('Fix Environment Variables.')
         pass
